@@ -12,8 +12,8 @@ def sum_digit_compute(n):
 
 
 def sum_digit_improve(n):
-    n = sum_digit_compute(n)
-    while (n // 10) > 0:
+    n = sum_digit_compute(n)  # log(n)
+    while n > 10:  # log(log(n))
         n = sum_digit_compute(n)
     return n
 
