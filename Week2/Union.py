@@ -21,6 +21,6 @@ def intersection(alist=[], blist=[]):
 def union(aSet, bSet):
     res = bSet
     for i in range(aSet.size()):
-        if aSet[i] in res:
+        if aSet[i] not in res:
             res.append(aSet[i])
     return res

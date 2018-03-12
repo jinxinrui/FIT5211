@@ -1,4 +1,7 @@
 # !/usr/local/bin/python3
+import random
+
+a = random.Random(15, 45)
 
 
 class Item:
