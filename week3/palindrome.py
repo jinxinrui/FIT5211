@@ -1,6 +1,7 @@
 # !/usr/local/bin/python3
 import re
 from pythonds.basic.deque import Deque
+# from collection import deque
 from TestSuite import test
 
 

@@ -79,7 +79,7 @@ start1 = time.time()
 coingame(30)  # 1 means alice, 0 means Bob
 end1 = time.time()
 start2 = time.time()
-coingameImprove(30)
+coingameImprove(25)[0]
 end2 = time.time()
 print("time: " + str(end1 - start1))
 

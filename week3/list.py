@@ -31,3 +31,31 @@ class Node:
             return True
         else:
             return self.getNext().search(item)
+
+    def isDecreasing(self, previousitem=None):
+        if previousitem is not None and self.getData() > previousitem:
+            return False
+        elif self.getNext() is None:
+            return True
+        else:
+            return self.getNext().isDecreasing(self.getData())
+
+
+class UnorderedListWithRecursion(unorderedList):
+    def size(self):
+        if self.head is None:
+            return 0
+        else:
+            return self.head.size()
+
+    def search(self, item):
+        if self.head is None:
+            return False
+        else:
+            return self.head.search(item)
+
+    def isDecreasing(self, previousitem=None):
+        if self.head is None:
+            return False
+        else:
+            return self.head.isDecreasing()

@@ -35,6 +35,6 @@ def recursiveBis(x, e):
         return (temp + res)
 
 
-iterateBis(2, 20)
+iterateBis(2, 10)
 print(0.1 ** 5)
 recursiveBis(2, 20)

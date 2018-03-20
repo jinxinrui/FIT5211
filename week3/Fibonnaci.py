@@ -32,7 +32,9 @@ def fibo2(n):
         return res
 
 
-def fibo3(n):
+def fibo3(n, lt=None):
+    # if lt is None:
+    #     lt = [None] * n
     if n == 0:
         return 0
     elif n == 1:
@@ -43,19 +45,22 @@ def fibo3(n):
 
 def fibo4(n, lt=None):
     if lt is None:
-        lt = list()
-        lt.append(0)
-        lt.append(1)
+        lt = [None] * (n + 1)
+        lt[0] = 0
+        lt[1] = 1
     if n == 0:
-        return lt[0]
+        return [lt[0], lt]
     elif n == 1:
-        return lt[1]
+        return [lt[1], lt]
+    elif lt[n] is not None:
+        return [lt[n], lt]
     else:
-        lt.insert(n, fibo4(n - 1, lt) + fibo4(n - 2, lt))
-        return lt[n]
+        res = fibo4(n - 1, lt)[0] + fibo4(n - 2, lt)[0]
+        lt[n] = res
+        return [lt[n], lt]
 
 
 fibo1(10)
 fibo2(10)
 fibo3(10)
-fibo4(10)
+fibo4(100)[0]

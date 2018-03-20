@@ -21,12 +21,21 @@ print(a[1])
 print(type(np.array([2, 1])))
 
 
-if res[0] % 2 == 1:
-    if temp[0] == 1:
-        temp[1] = res[1] + temp[1]
-    else:
-        temp[0] = 1
-        temp[1] = res[1]
-else:
-    if temp[0] == 0:
-        temp[1] = res[1] + temp[1]
+mem = [None] * 3
+mem[1] = 1
+if mem[0] is None:
+    print(mem[1])
+print(mem)
+
+
+ord("B")
+
+
+def test(a, lt=None):
+    lt = []
+    lt.append(a)
+    return lt
+
+
+test(10)
+test(100)
