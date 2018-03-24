@@ -28,9 +28,6 @@ if mem[0] is None:
 print(mem)
 
 
-ord("B")
-
-
 def test(a, lt=None):
     lt = []
     lt.append(a)
@@ -39,3 +36,13 @@ def test(a, lt=None):
 
 test(10)
 test(100)
+
+type(-100)
+assert(1 != 1)
+alist = [1, 2, 3]
+len(alist)
+# alist.append
+blist = [3, 2, 1]
+
+alist.append(blist)
+len(alist)

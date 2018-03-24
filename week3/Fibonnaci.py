@@ -44,23 +44,36 @@ def fibo3(n, lt=None):
 
 
 def fibo4(n, lt=None):
+    # if lt is None:
+    #     lt = [None] * (n + 1)
+    #     lt[0] = 0
+    #     lt[1] = 1
+    # if n == 0:
+    #     return [lt[0], lt]
+    # elif n == 1:
+    #     return [lt[1], lt]
+    # elif lt[n] is not None:
+    #     return [lt[n], lt]
+    # else:
+    #     res = fibo4(n - 1, lt)[0] + fibo4(n - 2, lt)[0]
+    #     lt[n] = res
+    #     return [lt[n], lt]
     if lt is None:
         lt = [None] * (n + 1)
-        lt[0] = 0
-        lt[1] = 1
+
     if n == 0:
-        return [lt[0], lt]
+        return 0
     elif n == 1:
-        return [lt[1], lt]
-    elif lt[n] is not None:
-        return [lt[n], lt]
+        return 1
+    if lt[n] is not None:
+        return lt[n]
     else:
-        res = fibo4(n - 1, lt)[0] + fibo4(n - 2, lt)[0]
+        res = fibo4(n - 1, lt) + fibo4(n - 2, lt)
         lt[n] = res
-        return [lt[n], lt]
+        return lt[n]
 
 
 fibo1(10)
 fibo2(10)
 fibo3(10)
-fibo4(100)[0]
+fibo4(10)
