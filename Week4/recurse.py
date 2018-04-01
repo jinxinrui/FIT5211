@@ -8,7 +8,7 @@ def recurse(n):
         recurse(n // 2)
 
 
-recurse(5)
+recurse(6)
 
 
 def add(n=1):

@@ -9,7 +9,7 @@ def sumOfNumberWay(n, mem=None):
     if n == 1:
         return [mem[0], mem]
     elif mem[n - 1] is not None:
-        print("in this condition")
+        # print("in this condition")
         return [mem[n - 1], mem]
     else:
         for i in range(1, n):
@@ -18,4 +18,4 @@ def sumOfNumberWay(n, mem=None):
         return [sum, mem]
 
 
-print(sumOfNumberWay(10))
+print(sumOfNumberWay(4))
