@@ -46,3 +46,17 @@ blist = [3, 2, 1]
 
 alist.append(blist)
 len(alist)
+
+
+for i in range(1, 2):
+    print(i)
+
+
+def fff(x=None):
+    if x is None:
+        x = []
+    x.append(5)
+    return x
+
+
+fff()
